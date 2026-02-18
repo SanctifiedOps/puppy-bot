@@ -194,7 +194,7 @@ https://solscan.io/token/3B1ijcocM5EDga6XxQ7JLW7weocQPWWjuhBYG8Vepump`
     category: "token",
     text: `💎 Barking Puppy ($BP) — built on Solana for speed and low fees.
 
-Token First. Socials Second. Legend Forever.
+Control The Memes, Bark Louder, Become Undeniable.
 
 CA: 3B1ijcocM5EDga6XxQ7JLW7weocQPWWjuhBYG8Vepump`
   },
@@ -242,13 +242,13 @@ Or swap on any Solana DEX with the CA:
 
 Join the conversation:
 
-🔗 https://x.com/i/communities/2015720504754364789`
+🔗 https://x.com/i/communities/2017378247273492968`
   },
   {
     category: "community",
     text: `📢 Make sure you're plugged in everywhere:
 
-👥 X Community: https://x.com/i/communities/2015720504754364789
+👥 X Community: https://x.com/i/communities/2017378247273492968
 🌐 Website: https://barkingpuppysol.com
 📱 Telegram: You're already here.`
   },
@@ -258,7 +258,7 @@ Join the conversation:
 
 Connect with holders in the X Community — the signal lives there:
 
-👥 https://x.com/i/communities/2015720504754364789`
+👥 https://x.com/i/communities/2017378247273492968`
   },
 
   // ===== SENTIMENT =====
@@ -268,7 +268,7 @@ Connect with holders in the X Community — the signal lives there:
 
 No coincidences. No accidents. Just the pack doing what it does.
 
-Token First. Socials Second. Legend Forever.`
+Control The Memes, Bark Louder, Become Undeniable.`
   },
   {
     category: "sentiment",
@@ -322,7 +322,7 @@ That's not luck. That's conviction.`
 
 The bigger the pack, the louder the bark. Share with your people.
 
-👥 X Community: https://x.com/i/communities/2015720504754364789`
+👥 X Community: https://x.com/i/communities/2017378247273492968`
   },
   {
     category: "engagement",
