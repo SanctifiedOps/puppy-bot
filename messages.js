@@ -74,13 +74,13 @@ Don't just ape — educate yourself first:
 
 Track price action, volume, and liquidity in real time:
 
-🔗 https://dexscreener.com/solana/bgpgvcwr1wrvvzw3r7kmaamyzurfarseykfzor3xcbfx`
+🔗 https://dexscreener.com/solana/gywaqp8lb3vqg7q2c58zguevyff8hyogg8besa1fncpz`
   },
   {
     category: "chart",
     text: `📈 How's $BP looking today? Check the live chart!
 
-DexScreener: https://dexscreener.com/solana/bgpgvcwr1wrvvzw3r7kmaamyzurfarseykfzor3xcbfx
+DexScreener: https://dexscreener.com/solana/gywaqp8lb3vqg7q2c58zguevyff8hyogg8besa1fncpz
 
 Stay on top of every candle 🕯️`
   },
@@ -90,7 +90,7 @@ Stay on top of every candle 🕯️`
 
 Watch the action unfold on DexScreener:
 
-📊 https://dexscreener.com/solana/bgpgvcwr1wrvvzw3r7kmaamyzurfarseykfzor3xcbfx`
+📊 https://dexscreener.com/solana/gywaqp8lb3vqg7q2c58zguevyff8hyogg8besa1fncpz`
   },
 
   // ===== COINGECKO =====
@@ -210,7 +210,7 @@ CA: 3B1ijcocM5EDga6XxQ7JLW7weocQPWWjuhBYG8Vepump`
 4️⃣ Paste the CA: 3B1ijcocM5EDga6XxQ7JLW7weocQPWWjuhBYG8Vepump
 5️⃣ Swap and join the pack! 🐶
 
-Check the chart: https://dexscreener.com/solana/bgpgvcwr1wrvvzw3r7kmaamyzurfarseykfzor3xcbfx`
+Check the chart: https://dexscreener.com/solana/gywaqp8lb3vqg7q2c58zguevyff8hyogg8besa1fncpz`
   },
   {
     category: "howto",
@@ -351,7 +351,7 @@ Here's everything you need to get started:
 📄 Whitepaper: https://barkingpuppysol.com/whitepaper
 🎨 PFP Generator: https://barkingpuppysol.com/pfp
 🎮 Game: https://barkingpuppysol.com/game
-📊 Chart: https://dexscreener.com/solana/bgpgvcwr1wrvvzw3r7kmaamyzurfarseykfzor3xcbfx`
+📊 Chart: https://dexscreener.com/solana/gywaqp8lb3vqg7q2c58zguevyff8hyogg8besa1fncpz`
   },
   {
     category: "engagement",
@@ -377,7 +377,7 @@ CA: 3B1ijcocM5EDga6XxQ7JLW7weocQPWWjuhBYG8Vepump`
     text: `💡 Pro Tip: Bookmark these links to stay safe!
 
 🌐 Official site: https://barkingpuppysol.com
-📊 DexScreener: https://dexscreener.com/solana/bgpgvcwr1wrvvzw3r7kmaamyzurfarseykfzor3xcbfx
+📊 DexScreener: https://dexscreener.com/solana/gywaqp8lb3vqg7q2c58zguevyff8hyogg8besa1fncpz
 🔎 Solscan: https://solscan.io/token/3B1ijcocM5EDga6XxQ7JLW7weocQPWWjuhBYG8Vepump
 
 Only use official links. Stay safe out there! 🐾`
@@ -502,7 +502,7 @@ CA: 3B1ijcocM5EDga6XxQ7JLW7weocQPWWjuhBYG8Vepump`
 
 $BP holders don't hope for green candles — they expect them.
 
-📊 https://dexscreener.com/solana/bgpgvcwr1wrvvzw3r7kmaamyzurfarseykfzor3xcbfx`
+📊 https://dexscreener.com/solana/gywaqp8lb3vqg7q2c58zguevyff8hyogg8besa1fncpz`
   },
 ];
 
