@@ -8,6 +8,7 @@
     "setup": "node setup.js"
   },
   "dependencies": {
+    "@netlify/blobs": "^8.1.0",
     "node-telegram-bot-api": "^0.66.0",
     "dotenv": "^16.4.7"
   }

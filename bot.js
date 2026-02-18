@@ -18,7 +18,7 @@ const messages = require("./messages");
 // ---------------------------------------------------------------------------
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const CHANNEL_ID = process.env.CHANNEL_ID;
-const POST_INTERVAL = (parseInt(process.env.POST_INTERVAL_MINUTES, 10) || 10) * 60 * 1000;
+const POST_INTERVAL = (parseInt(process.env.POST_INTERVAL_MINUTES, 10) || 5) * 60 * 1000;
 
 if (!BOT_TOKEN) {
   console.error("ERROR: BOT_TOKEN not set in .env");
@@ -36,8 +36,8 @@ if (!CHANNEL_ID) {
 // ---------------------------------------------------------------------------
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 
-// Shuffle the messages on startup so the order isn't identical every restart
-let queue = shuffleArray([...messages]);
+// Build a shuffled queue where no two adjacent messages share a category
+let queue = buildCategoryQueue(messages);
 let index = 0;
 
 // ---------------------------------------------------------------------------
@@ -45,10 +45,10 @@ let index = 0;
 // ---------------------------------------------------------------------------
 function getNextMessage() {
   if (index >= queue.length) {
-    // Re-shuffle when we've gone through every message
-    queue = shuffleArray([...messages]);
+    const lastCategory = queue[queue.length - 1].category;
+    queue = buildCategoryQueue(messages, lastCategory);
     index = 0;
-    console.log("[cycle] Message library reshuffled — starting new cycle.");
+    console.log("[cycle] New queue built — all messages will play before repeating.");
   }
   return queue[index++];
 }
@@ -150,4 +150,38 @@ function shuffleArray(arr) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
+}
+
+function buildCategoryQueue(msgs, avoidCategory) {
+  // Group messages by category
+  const groups = {};
+  msgs.forEach((msg) => {
+    if (!groups[msg.category]) groups[msg.category] = [];
+    groups[msg.category].push(msg);
+  });
+
+  // Shuffle within each category
+  Object.values(groups).forEach((arr) => shuffleArray(arr));
+
+  // Build queue: pick from a random category that isn't the same as the last
+  const queue = [];
+  const categoryKeys = Object.keys(groups);
+  let lastCategory = avoidCategory || null;
+
+  while (categoryKeys.some((k) => groups[k].length > 0)) {
+    let available = categoryKeys.filter(
+      (k) => groups[k].length > 0 && k !== lastCategory
+    );
+
+    // Fallback if only one category remains
+    if (available.length === 0) {
+      available = categoryKeys.filter((k) => groups[k].length > 0);
+    }
+
+    const cat = available[Math.floor(Math.random() * available.length)];
+    queue.push(groups[cat].shift());
+    lastCategory = cat;
+  }
+
+  return queue;
 }
