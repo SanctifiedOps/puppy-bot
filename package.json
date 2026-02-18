@@ -1,0 +1,14 @@
+{
+  "name": "barking-puppy-bot",
+  "version": "1.0.0",
+  "description": "Telegram community update bot for Barking Puppy ($BP)",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "setup": "node setup.js"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.66.0",
+    "dotenv": "^16.4.7"
+  }
+}
