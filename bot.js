@@ -18,7 +18,7 @@ const messages = require("./messages");
 // ---------------------------------------------------------------------------
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const CHANNEL_ID = process.env.CHANNEL_ID;
-const POST_INTERVAL = (parseInt(process.env.POST_INTERVAL_MINUTES, 10) || 20) * 60 * 1000;
+const POST_INTERVAL = (parseInt(process.env.POST_INTERVAL_MINUTES, 10) || 40) * 60 * 1000;
 
 if (!BOT_TOKEN) {
   console.error("ERROR: BOT_TOKEN not set in .env");
