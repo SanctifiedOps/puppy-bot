@@ -69,6 +69,16 @@ export default async () => {
     console.log("No existing state found, creating new queue.");
   }
 
+  // Enforce 40-minute minimum gap between posts
+  const MIN_GAP_MS = 40 * 60 * 1000;
+  if (state?.lastPostTime) {
+    const elapsed = Date.now() - state.lastPostTime;
+    if (elapsed < MIN_GAP_MS) {
+      console.log(`[skip] Only ${Math.round(elapsed / 60000)}m since last post, need 40m.`);
+      return new Response("Too soon", { status: 200 });
+    }
+  }
+
   // If no state or queue exhausted, build a fresh queue
   if (!state || state.index >= state.queue.length) {
     const lastCategory = state?.lastCategory || null;
@@ -96,6 +106,7 @@ export default async () => {
   state.index++;
 
   // Save state back to blob store
+  state.lastPostTime = Date.now();
   await store.set("queue-state", JSON.stringify(state));
 
   // Post to Telegram
@@ -126,5 +137,5 @@ export default async () => {
 };
 
 export const config = {
-  schedule: "*/40 * * * *",
+  schedule: "*/20 * * * *",
 };
